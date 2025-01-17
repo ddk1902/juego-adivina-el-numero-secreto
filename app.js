@@ -42,6 +42,8 @@ if(numeroUsuario===numeroSecreto){
     asignarEstilos('p',`Acertaste el número secreto en ${contadorIntentos} ${(contadorIntentos===1) ? 'intento':'intentos'}..!!`);
     //Cuando el usuario acierta, habilita un nuevo juego
       document.getElementById('reiniciar').removeAttribute('disabled');
+    //Deshabilitamos el botón de intentar de nuevo
+    document.querySelector('#btn_intento').setAttribute('disabled','true');
 }else{
     if(numeroUsuario>numeroSecreto){
         asignarEstilos('p','El número secreto es menor...! Intenta de nuevo');
